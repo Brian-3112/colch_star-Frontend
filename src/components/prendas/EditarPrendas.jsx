@@ -379,8 +379,13 @@ const EditarPrendas = ({ detallesPrendas,handleClose,show,handleClosee,handleSho
                     />
                   
                   <CancelarModal  reset={reset}
+
                                     handleClose={handleClose}
-                                    setSelectColorsNombre={setSelectColorsNombre}  />
+                                    ColorsNombre={setSelectColorsNombre}
+                                    
+                                  
+                                      
+                                     />
                   <GuardarModal />
                 </div>
             </form>

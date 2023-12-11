@@ -93,11 +93,7 @@ const AgregarPrendas = () => {
       tallas,
     } = data;
 
-    // console.log(setSelectColorsNombre)
 
-    console.log(selectColorsNombre)
-
-    console.log('colors',colors)
 
     if (selectColorsNombre==''){
       Swal.fire({
@@ -108,8 +104,6 @@ const AgregarPrendas = () => {
 
     }else{
 
-      console.log(data)
-
       agregarPrendas({
         nombre: nombre.trim(),
         cantidad: cantidad.trim(),
@@ -119,7 +113,7 @@ const AgregarPrendas = () => {
         imagen: imagen[0],
         publicado: publicado,
         tallas: tallas,
-        colores: JSON.stringify(colors),
+        colores: JSON.stringify(selectColorsNombre),
       },
 
       reset,

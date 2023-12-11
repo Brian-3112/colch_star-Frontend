@@ -155,7 +155,8 @@ const SeleccionarColorsEditar = ({showw,handleClosee,detallesPrendas}) => {
                     text={"Regresar"}
                     onClick={() => {
                       
-                      handleClosee(); // Asumiendo que handleClosee es una función que cierra el modal
+                      handleClosee();
+                      // Asumiendo que handleClosee es una función que cierra el modal
                   }}
                     modalClouse={"modal"}
                   />

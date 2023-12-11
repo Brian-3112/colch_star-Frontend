@@ -30,6 +30,7 @@ const PrendasProvider = ({ children }) => {
   }, [auth]);
 
   const agregarPrendas = async (prenda, reset, handleClose) => {
+
     try {
       const res = await clienteAxios.post("/prendas", prenda, {
         headers: {

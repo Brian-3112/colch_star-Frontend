@@ -92,7 +92,7 @@ const AgregarProducto = () => {
                 fk_prenda: fk_prenda.trim(),
                 publicado: publicado,
                 imagen: imagen[0],
-                disenos: JSON.stringify(disenos),
+                disenos: JSON.stringify(setSelectedDisenoNombre),
             },
 
             reset,
@@ -325,7 +325,7 @@ const AgregarProducto = () => {
                                 <CancelarModal
                                     reset={reset}
                                     handleClose={handleClose}
-                                    setSelectedDisenoNombre={setSelectedDisenoNombre}
+                                    DisenoNombre={setSelectedDisenoNombre}
                                 />
                                 <GuardarModal />
                             </div>

@@ -39,16 +39,7 @@ const SeleccionarColors = ({ handleClosee, showw, handleShoww }) => {
   const agregarNuevoColor = (data) => {
 
 
-      // Validar si el color ya está seleccionado
-    //   if (selectColorsNombre.some((color) => color.id_color === data.id_color)) {
-    //     Swal.fire({
-    //       icon: "error",
-    //       title: "Oops...",
-    //       text: "Este color ya ha sido seleccionado.",
-    //     });
-    //     return; // Detener la función si el color ya está seleccionado
-    //   }
-    // console.log(data);
+      
 
     agregarColors(data);
 
@@ -60,7 +51,6 @@ const SeleccionarColors = ({ handleClosee, showw, handleShoww }) => {
     );
     setSelectColorsNombre([...selectColorsNombre, newColor]);
 
-    console.log(selectColorsNombre)
   };
 
   const [colorss, setColors] = useState([]);
@@ -70,6 +60,14 @@ const SeleccionarColors = ({ handleClosee, showw, handleShoww }) => {
       setColors(res.data);
     });
   }, []);
+
+  useEffect(()=>{
+    if(selectColorsNombre.length==0){
+      reset()
+    }
+  },[selectColorsNombre])
+
+
 
   return (
     <>
@@ -94,6 +92,7 @@ const SeleccionarColors = ({ handleClosee, showw, handleShoww }) => {
               handleClose={() => {
                 reset();
                 handleClosee();
+                
                 
               }}
             />
