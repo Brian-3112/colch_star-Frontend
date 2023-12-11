@@ -161,7 +161,6 @@ export const ListarPrendas = () => {
                     <td>
                       <BotonNegro
                         text="Editar"
-                        modalToOpen={Prendas.estado ? "#modalEditarPrenda" : ""}
                         onClick={() => informacionModal(Prendas)}
                       />
                     </td>
@@ -249,9 +248,7 @@ export const ListarPrendas = () => {
                       >
                         <BotonNegro
                           text="Editar"
-                          modalToOpen={
-                            Prendas.estado ? "#modalEditarPrenda" : ""
-                          }
+                         
                           onClick={() => informacionModal(Prendas)}
                         />
                       </div>

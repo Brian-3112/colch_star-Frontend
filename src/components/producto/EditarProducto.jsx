@@ -298,7 +298,7 @@ const EditarProducto = ({ editarProducto, handleClose, show,  handleClosee,handl
                                 <CancelarModal
                                     reset={reset}
                                     handleClose={handleClose}
-                                    setSelectedDisenoNombre={setSelectedDisenoNombre}
+                                    DisenoNombre={setSelectedDisenoNombre}
                                 />
 
                                 <GuardarModal />
