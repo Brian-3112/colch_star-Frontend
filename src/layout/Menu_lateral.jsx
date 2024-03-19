@@ -95,7 +95,7 @@ const MenuLateral = () => {
                     ) : (
                         ''
                     )}
-                    
+
                     {auth.usuario.permisos.includes('usuarios') ? (
                         <li>
                             <Link to={'/administracion/usuarios'}>
@@ -264,18 +264,19 @@ const MenuLateral = () => {
                     )}
 
                     <li>
-                        <Link to={'/'}>
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <i className='bx bxs-purchase-tag'></i>
                             <span className={styles.link_name}>Catálogo</span>
-                        </Link>
+                        </a>
                         <ul className={`${styles.sub_menu} ${styles.blank}`}>
                             <li>
-                                <Link to={'/'} className={styles.link_name}>
+                                <a href="/" className={styles.link_name} target="_blank" rel="noopener noreferrer">
                                     Catálogo
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <div className={styles.profile_details}>
                             <div className={styles.profile_content}>
