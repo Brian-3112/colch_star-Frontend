@@ -135,13 +135,10 @@ const ListarOrdenes = () => {
         ) {
             // Si el nuevo estado es 'Cancelada' y el estado actual es 'Creada', permitir el cambio
             cambiarEstadoDeOrden(e.target.value, orden);
-        } else {
-            return Swal.fire(
-                'Acción inválida!',
-                `No se puede cambiar el estado a '${e.target.value}', porque esta orden esta '${orden.estado_de_orden}'!!`,
-                'error'
-            );
-        }
+        } 
+        
+        // Si no hay restricciones, permite cambiar el estado
+        cambiarEstadoDeOrden(e.target.value, orden);
     };
 
 
